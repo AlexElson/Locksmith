@@ -13,15 +13,15 @@ def index(request):
     if request.method == 'POST':
         form = AppForm(request.POST)
 
-        # check whether it's valid:
         if form.is_valid():
-            submit = form.cleaned_data['app1']
-            num = form.cleaned_data['app2']
+            submit = form.cleaned_data['submit']
+            num = form.cleaned_data['num']
+
             if (num <=0):
                 #raise ValidationError("Must be over 0")
                 for n in range(num,0):
                     Info.objects.filter(info=submit).delete()
-                form = SuggestionForm()
+                form = AppForm()
             else:
                 for n in range(0,num):
                     suggest = Info(info=submit)
@@ -32,14 +32,17 @@ def index(request):
     else:
         form = AppForm()
         submit = ""
-    bar = Info.objects.all().filter()
+
+    first_bar = Info.objects.all().filter(info=0)
+    second_bar = Info.objects.filter(info=1)
     context = {
         'title':"Home",
-        'bar': bar,
+        'first': first_bar,
+        'second': second_bar,
         'form':form,
         'submit':submit
         }
-    return render(request,'home.html')
+    return render(request,'home.html', context)
 
 
     #return HttpResponse("Hello, world. You're at the polls index.")

@@ -1,9 +1,9 @@
 {% extends "default.html" %}
 {% load static %}
 
-{% load staticfiles %}
+<!-- {% load staticfiles %}
 
-{% static "channels/js/websocketbridge.js" %}
+{% static "channels/js/websocketbridge.js" %} -->
 
 {% block title %}
 {{ title }}
@@ -36,14 +36,14 @@
       {% csrf_token %}
       <div class="row">
         <div class="large-12 columns">
-          {{ form.errors }}
-          {{ form.app1.label }}
-          {{ form.app1 }}
+          {{ form.submit.errors }}
+          {{ form.submit.label }}
+          {{ form.submit }}
         </div>
         <div class="large-12 columns">
-          {{ form.errors }}
-          {{ form.app2.label }}
-          {{ form.app2 }}
+          {{ form.num.errors }}
+          {{ form.num.label }}
+          {{ form.num }}
         </div>
       </div>
       <input type="submit" class="button" id="clear" value="Apply">
@@ -69,9 +69,12 @@
 
     <div id="suggest_list">
       <ul>
-      {% for element in bar %}
-      <!--{{ element }} -->
+      {% for element in first %}
       X
+      {% endfor %}
+      <br>
+      {% for element in second %}
+      O
       {% endfor %}
 
       </ul>
