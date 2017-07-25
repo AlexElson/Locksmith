@@ -36,7 +36,7 @@ def index(request):
     first_bar = Info.objects.all().filter(info=0)
     second_bar = Info.objects.filter(info=1)
     context = {
-        'title':"Home",
+        'title':"Valley Lock and Safe | Chico, CA",
         'first': first_bar,
         'second': second_bar,
         'form':form,
