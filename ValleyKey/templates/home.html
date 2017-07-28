@@ -16,6 +16,21 @@
   .col-sm-4{
     padding: 20px;
   }
+  .impact {
+	font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+  .row.no-gutters {
+  }
+  .row.no-gutters > [class^="col-"],
+  .row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
 </style>
 
 <!--
@@ -65,8 +80,9 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-4" style="background-color:white;">
-      <center><img src = {% static "key.png" %}><br></center><br>
-      <p style="color:grey; font-size:15px;">
+      <!-- <center><img src = {% static "key.png" %}><br></center><br>-->
+      <b><center><span style="font-size:200%" class="impact"> We are <span style="color:red; ; text-shadow: 1px 1px gray;">Trusted </b></center></span>
+      <p style="color:grey; font-size:15px;"> <br>
       Valley Lock and Safe is a trusted Locksmith
       located in Chico, California, on Esplanade, servicing  and
       the surrouding area for years. We are a local locksmithing
@@ -74,14 +90,15 @@
       for your commercial, residential, or automotive needs. We
       offer repairs, installations, sales, and more. Whether
       you are a small business owner looking to secure
-      your windows and doors, or simply had the misfortune
+      your doors and windows, or simply had the misfortune
       to lock yourself out of your home or apartment, we offer 24 hour
-      emergency locksmith services at reasonable prices. Founded in 1997,
+      emergency locksmith services at reasonable prices. Founded in 1990,
       we continue to play a pivotal role in the security of many
       of those living here in the Northern Valley. </p>
     </div>
     <div class="col-sm-4" style="background-color:#E6E6E6; text-align:center;">
-      <center><img src = {% static "phone.png" %}><br></center><br>
+      <!-- <center><img src = {% static "phone.png" %}><br></center><br> -->
+      <b><center><span style="font-size:200%" class="impact"> Call <span style="color:red; text-shadow: 1px 1px gray;"> Now </b></center></span>
       <p style="color:red; font-size: 150%; text-shadow: 1px 1px gray;"> <b> (530) 342-4042 </b> <br> </p>
       <p style="color:#828282;font-size: 15px;">
         Shop Hours <br>
@@ -98,8 +115,10 @@
       </center>
     </div>
     <div class="col-sm-4" style="background-color:white;">
-      <center><img src = {% static "lock.png" %}><br></center><br>
-      <p style="color:grey;  font-size:15px;"> What exactly do we do?
+      <!-- <center><img src = {% static "lock.png" %}><br></center><br> -->
+      <b><center><span style="font-size:200%" class="impact"> Our <span style="color:red; text-shadow: 1px 1px gray;"> Services </b></center></span>
+      <p style="color:grey;  font-size:15px;"><br>
+      What exactly do we do?
       We at Valley Lock and Safe
       hold decades of technical experience, ready
       to help you duplicate or repair keys, unlock front doors,
@@ -168,28 +187,45 @@
       style="position:absolute; TOP:80px; margin-left:50%; transform: translate(-50%, -5%); width:30%; height:auto;">
 </div>
 
-<br><br>
 
-<center>
-  We are not located far from
-  your wherever you might need service, residing in the heart of Chico on
-  Esplanade. Feel free to bring your needs to our shop! <br><br>
-<div id="googleMap" style="width:70%;height:400px;"></div>
-</center>
+<div class="container-fluid">
+  <div class="row no-gutters">
+    <div class="col-sm-6" style="background-color:white;">
+      <!-- <center><img src = {% static "key.png" %}><br></center><br>-->
+      <div id="googleMap" style="width:100%;height:400px;"></div>
+    </div>
+
+    <div class="col-sm-6" style="min-height: 400px; background-image:linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(255, 0, 0, 0.75)
+      ), url({% static "stock_keys.jpg" %});
+      background-size: 100% auto;
+      background-attachment:fixed; background-color:#E6E6E6; text-align:left; padding:30px;">
+      <b><center><span style="font-size:200%; color:white" class="impact"> Visit our <span style="color:red; text-shadow: 2px 2px black;"> Shop </b></center></span>
+      <br>
+      <span style="color:white; font-size:120%;">
+        We are located not far from
+        your wherever you might need service, residing in the heart of Chico on
+        Esplanade. We're open <b> Monday through Friday</b>; feel free to bring your needs to our shop! We fulfill a variety
+        of needs, including key replacement, repairs, and car key programming
+        services for your car, truck, or SUV. Or, call us in the event of an emergency
+        and we'll be over in no time.
+      </span>
+    </div>
+  </div>
+</div>
 
 <!--
 <div style="position:absolute; top:1120pt; margin-left:50%; left:-270pt">
   Trademark
 </div> -->
 
-<br><br>
-
-<div class="navbar navbar-default navbar-bottom" style="background-color:#363636;">
+<div class="navbar navbar-default navbar-bottom" style="background-color:#363636; border: none;">
   <div class="container">
     <p style="color:white;">
       <br><br><br>
 
-      <span style="font-size:28px; color:red;"> Contact Us: </span> <br><br>
+      <span style="font-size:28px; color:red;" class="impact"> Contact Us: </span> <br><br>
 
       Valley Lock and Safe<br>
       1929 Esplanade,<br>
@@ -200,7 +236,7 @@
       valleylock1405@sbcglobal.net  <br>
       www.valleylockandsafe.net <br> <br>
 
-      <strong><span style="font-size:20px;"> Dan Blankenship </strong></span>
+      <strong><span style="font-size:20px;" class="impact"> Dan Blankenship </strong></span>
       <span style="color:red;"> Owner </span>
 
       <br><br><br><br><br>
@@ -210,7 +246,7 @@
 
 <div class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
-    <p class="navbar-text pull-left"> Valley Lock and Safe - 1929 Esplanade, Chico, CA 95926 </p>
+    <p class="navbar-text pull-left">  </p>
     <p class="navbar-text pull-right"> (530) 342-4042 </p>
     <p class="navbar-btn btn-danger btn float pull-right"> Call Us &#x260E; </p>
   </div>
