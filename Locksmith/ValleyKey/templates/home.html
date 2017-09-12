@@ -1,0 +1,363 @@
+{% extends "default.html" %}
+{% load static %}
+
+{% load bootstrap3 %}
+
+<!-- {% load staticfiles %}
+{% static "channels/js/websocketbridge.js" %} -->
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+  .col-sm-4{
+    padding: 20px;
+  }
+  .impact {
+	font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+  .row.no-gutters {
+  }
+  .row.no-gutters > [class^="col-"],
+  .row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom right,rgba(0,18,29,0.75), rgba(220,66,37,0.45));
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
+
+<!--
+<div id = "cover">
+  <img src = {% static "cover_chico.jpg" %}
+    style="width: 100%; max-height: 100%;">
+</div> -->
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="overlay"></div>
+      <img src={% static "valley_lock_shop.png" %} style="width:100%;">
+      <div class="carousel-caption">
+        <h3>Your Friendly Neighborhood Locksmith</h3>
+        <p>Founded in 1990!</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="overlay"></div>
+      <img src={% static "cover_chico.jpg" %} style="width:100%;">
+      <div class="carousel-caption">
+        <h3>Security is Key</h3>
+        <p>Our professionals have decades of expertise.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+
+      <div class="row">
+        <div class="col-sm-6" style="background-color:white;">
+          <!-- <center><img src = {% static "key.png" %}><br></center><br>-->
+          <br>
+          <b><center><span style="font-size:200%" class="impact"> We are <span style="color:red; ; text-shadow: 1px 1px gray;">Trusted </b></center></span>
+          <p style="color:grey; font-size:15px; min-height:400px;"> <br>
+          Valley Lock and Safe is a trusted Locksmith
+          located in Chico, California, on Esplanade, servicing  and
+          the surrouding area for years. We are a local locksmithing
+          shop with the professionalism and expertise you need
+          for your commercial, residential, or automotive needs. We
+          offer repairs, installations, sales, and more. Whether
+          you are a small business owner looking to secure
+          your doors and windows, or simply had the misfortune
+          to lock yourself out of your home or apartment, we offer 24 hour
+          emergency locksmith services at reasonable prices. Founded in 1990,
+          we continue to play a pivotal role in the security of many
+          of those living here in the Northern Valley. </p>
+        </div>
+        <div class="col-sm-6" style="background-color:#E6E6E6; text-align:center;">
+          <!-- <center><img src = {% static "phone.png" %}><br></center><br> -->
+          <br>
+          <b><center><span style="font-size:200%" class="impact"> Call <span style="color:red; text-shadow: 1px 1px gray;"> Now </b></center></span>
+          <p style="color:red; font-size: 150%; text-shadow: 1px 1px gray;"> <b> (530) 342-4042 </b> <br> </p>
+          <p style="color:#828282;font-size: 15px;">
+            Shop Hours <br>
+            Monday:	8:30AM–5PM <br>
+            Tuesday: 8:30AM–5PM  <br>
+            Wednesday: 8:30AM–5PM <br>
+            Thursday:	8:30AM–5PM <br>
+            Friday:	8:30AM–5PM <br>
+            Saturday:	Closed <br>
+            Sunday:	Closed <br> </p>
+            <b> 24/7 Emergency Service </b></p>
+          <center>
+          <button type="button" class="btn btn-danger btn-lg">Call <img src = {% static "icons/call_icon.png" %}> <!--&#x260E;--></button>
+          </center>
+          <br>
+        </div>
+      </div>
+
+      <div class="row no-gutters">
+
+          <div class="col" style="min-height:200px; background-image:linear-gradient(
+              rgba(0, 0, 0, 0.75),
+              rgba(255, 0, 0, 0.75)
+            ), url({% static "newspaper1.jpg" %});
+            background-size: 65% auto;
+            background-attachment:fixed; background-color:#E6E6E6; text-align:left; padding:30px;">
+          </div>
+
+          <div class="w-100"></div>
+
+          <div class="col" style="padding:30px">
+            <b><center><span style="font-size:200%" class="impact"> Security comes <span style="color:red; ; text-shadow: 1px 1px gray;"> First </b></center></span>
+            <br>
+            <span style="color:#828282">
+            Don't let your home be vulnerable to burglary or theft. Your property is valuable,
+            and a few simple upgrades on outdated lock systems can go a long way to
+            prevent unwanted intruders
+            and common breaking-and-entering scenarios such as key bumping.
+            New technologies, such as low-voltage keypad and
+            anti-theft security systems, go a long way in ensuring affordable and
+            efficient crime prevention. We will work with you to secure your front,
+            back, patio, and sliding door enterances, as well as safe protection.
+            Crime doesn't have to win if you let us take the precautionary
+            steps for you!
+            </span>
+
+          </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-sm-4" style="background-color:white; min-height:900px">
+      <!-- <center><img src = {% static "lock.png" %}><br></center><br> -->
+      <b><center><span style="font-size:200%" class="impact"> Our <span style="color:red; text-shadow: 1px 1px gray;"> Services </b></center></span>
+      <p style="color:grey;  font-size:15px;"><br>
+      What exactly do we do?
+      We at Valley Lock and Safe
+      hold decades of technical experience, ready
+      to help you duplicate or repair keys, unlock front doors,
+      or install new lock and key systems.
+      <br><br>
+      <img src = {% static "icons/replace_icon.png" %}>
+      <!--<span style="color:#d2de07; text-shadow: 1px 1px gray; font-size:25px;">
+        &#x26BF;--> </span><span style="color:black"> |
+        <b> Lost Keys </span></b>
+        <br>
+        <span style="padding-left: 40px; display: inline-block;">
+        You can change your keys and keep your existing locks. If you have keys
+        unaccounted for, it is a good idea to re-key. This is a very cost effective
+        approach to security. </span>
+
+      <br><br>
+      <img src = {% static "icons/emergency_icon.png" %}>
+      <!--<span style="color:#df1a00 ; text-shadow: 1px 1px gray; font-size:30px;">
+        &#x26A0; --></span><span style="color:black"> |
+        <b> Emergency Lockouts </span></b>
+        <br>
+        <span style="padding-left: 40px; display: inline-block;">
+        If you are locked out, give us a call. We will get you in fast. We have over
+        40 years of combined experience with unlocking just about anything. </span>
+
+
+      <br><br>
+      <img src = {% static "icons/car_unlock_icon.png" %}>
+      <!--<span style="color:#001fdf ; text-shadow: 1px 1px gray; font-size:28px;">
+        &#x26CD;--></span><span style="color:black"> |
+        <b> Auto Lockouts </span></b>
+        <span style="padding-left: 40px; display: inline-block;">
+        Locked your keys in your car outside work yet again?
+        We handle automotive car door unlocks and repairs.</span>
+
+      <br><br>
+      <img src = {% static "icons/security_icon.png" %}>
+      <!--<span style="color:#df1a00 ; text-shadow: 1px 1px gray; font-size:30px;">
+        &#x26A1;--></span> <span style="color:black"> |
+        <b> Commercial Locksmith </span></b>
+        <span style="padding-left: 40px; display: inline-block;">
+        Contact Valley Lock and Safe when you need affordable
+        low-voltage alarm and keypad installations - preventing
+        possible theft or burglary. </span>
+
+      <br><br>
+      <img src = {% static "icons/residence_icon.png" %}>
+      <!--<span style="color:#df1a00 ; text-shadow: 1px 1px gray; font-size:26px;">
+        &#x26FA;--></span><span style="color:black"> |
+        <b> Residential Services </span></b>
+        <span style="padding-left: 40px; display: inline-block;">
+        No need to panic: we will quickly come to you to help you out
+        if you are locked out of your home. We also work on safes and other
+        combination locks, whether you need safe opening or combo changes. </span>
+
+      <br><br>
+      <img src = {% static "icons/weather_icon.png" %}>
+      <!--<span style="color:#00c1df ; text-shadow: 1px 1px gray; font-size:28px;">
+        &#x26C8;--></span></span><span style="color:black"> |
+        <b> Rain or Shine </span></b>
+        <span style="padding-left: 40px; display: inline-block;">
+        ...night or day, our response time is fast in
+        any and all conditions. </span>
+
+      <br>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id = "logo">
+  <img src = {% static "chico_valley_transparent.png" %}
+      style="position:absolute; TOP:80px; margin-left:50%; transform: translate(-50%, -5%); width:30%; height:auto;">
+</div>
+
+
+<div class="container-fluid">
+  <div class="row no-gutters">
+    <div class="col-sm-6" style="background-color:white;">
+      <!-- <center><img src = {% static "key.png" %}><br></center><br>-->
+      <div id="googleMap" style="width:100%;height:400px;"></div>
+    </div>
+
+    <div class="col-sm-6" style="min-height: 400px; background-image:linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(255, 0, 0, 0.75)
+      ), url({% static "stock_keys.jpg" %});
+      background-size: 100% auto;
+      background-attachment:fixed; background-color:#E6E6E6; text-align:left; padding:30px;">
+      <b><center><span style="font-size:200%; color:white" class="impact"> Visit our <span style="color:red; text-shadow: 2px 2px black;"> Shop </b></center></span>
+      <br>
+      <span style="color:white; font-size:120%;">
+        We are located not far from
+        your wherever you might need service, residing in the heart of Chico on
+        Esplanade. We're open <b> Monday through Friday</b>; feel free to bring your needs to our shop! We fulfill a variety
+        of needs, including key replacement, repairs, and car key programming
+        services for your car, truck, or SUV. Or, call us in the event of an emergency
+        and we'll be over in no time.
+      </span>
+    </div>
+  </div>
+</div>
+
+<!--
+<div style="position:absolute; top:1120pt; margin-left:50%; left:-270pt">
+  Trademark
+</div> -->
+
+<div class="navbar navbar-default navbar-bottom" style="background-color:#363636; border: none;">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+
+        <p style="color:white;">
+          <br><br><br>
+
+          <span style="font-size:28px; color:red;" class="impact"> Contact Us: </span> <br><br>
+
+          Valley Lock and Safe<br>
+          1929 Esplanade<br>
+          Chico, CA 95926 <br>
+          <b>Telephone:</b> (530) 342-4042 <br>
+          Fax: (530) 892-0923 <br> <br>
+
+          valleylock1405@sbcglobal.net  <br>
+          www.valleylockandsafe.net <br> <br>
+
+          <strong><span style="font-size:20px;" class="impact"> Dan Blankenship </strong></span>
+          <span style="color:red;"> Owner </span>
+
+          <br><br><br><br><br>
+        </p>
+
+      </div>
+      <div class="col-sm-6">
+          <br><br><br>
+          <center>
+          <span style="color:white;"><i> "Valley Lock and Key has always been there when I needed them most."</i> - <span style="color:gray"> Haifaa A. </span>
+          <br><br>
+          <span style="color:white;"><i> "I am so very pleased with the quality of service I received today by Dan of Valley Lock & Safe. I had an emergency lock repair at my son's home... and [he] had me on my way about 30 minutes later. Very professional businessman."</i> - <span style="color:gray"> Linda H. </span>
+          <br><br>
+          <span style="color:white;"><i> "Thank you so much for your quick response time. I locked my keys inside and it was past midnight!"</i> - <span style="color:gray"> Anonymous Message </span>
+
+          <br><br>
+          <img src = {% static "email_icon.png" %}>
+          <img src = {% static "facebook_icon.png" %}>
+          <img src = {% static "cross_keys.png" %}>
+          </center>
+          <br>
+          <br>
+      </div>
+  </div>
+</div>
+
+<div class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <p class="navbar-text pull-left"> © 2017 </p>
+    <p class="navbar-text pull-right"> (530) 342-4042 </p>
+    <p class="navbar-btn btn-danger btn float pull-right"> Call Us <img src = {% static "icons/call_icon.png" %}> <!--&#x260E;--> </p>
+  </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+function myMap() {
+
+  var mapProp= {
+      center:new google.maps.LatLng(39.746982,-121.85279739999999),
+      zoom:17,
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+  var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(39.746982,-121.85279739999999),
+    map: map,
+    title: 'Valley Lock and Safe, Chico CA'
+  });
+
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJKwbGy4_XlpQHlygksN9jRNKXJxOIopE&callback=myMap"></script>
+
+{% endblock %}

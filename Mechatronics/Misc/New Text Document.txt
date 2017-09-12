@@ -1,0 +1,14 @@
+		<script type="text/javascript"> //////////////////////////////////Moving Buttons
+			function ContentDown(d){
+				var obj = document.getElementById(d);
+				var currentPosition = parseInt(obj.style.top)
+				var amountToMove = 30
+
+				obj.style.top = currentPosition+amountToMove+"pt";
+			}
+		</script>	
+		<div id="movingDiv" style="position:absolute; left:100pt; top:10pt; border:1px black outset; width:160px; text-align:center; background-color:white; font-weight:bold;">
+			<a href="javascript:ContentDown('movingDiv')">
+				Moving Div
+			</a>
+		</div>
