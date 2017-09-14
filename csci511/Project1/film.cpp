@@ -20,3 +20,16 @@ vector<string> Film::getOther(){
 	other.push_back(m_year);
 	return other;
 }
+
+string Film::getType(){
+  return "Film";
+}
+
+void Film::Display(){
+  cout << Media::m_call_number << ", ";
+  cout << Media::m_title << ", ";
+  cout << Media::m_subjects << ", ";
+  cout << m_notes << ", ";
+  cout << m_director << ", ";
+  cout << m_year;
+}

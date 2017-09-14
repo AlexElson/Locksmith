@@ -11,23 +11,17 @@ using namespace std;
 
 class Film : public Media {
     public:
-		Film(string, string, string, string, string, string);
-		virtual vector<string> getOther();
+  		Film(string, string, string, string, string, string);
+  		virtual vector<string> getOther();
+      virtual string getType();
+      virtual void Display();
 
     protected:
 
-		string m_notes;
-		string m_director;
-		string m_year;
+  		string m_notes;
+  		string m_director;
+  		string m_year;
 
 };
 
 #endif
-
-
-
-
-
-
-
-

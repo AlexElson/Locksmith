@@ -22,3 +22,17 @@ vector<string> Periodical::getOther(){
 	other.push_back(m_related_titles);
 	return other;
 }
+
+string Periodical::getType(){
+  return "Periodical";
+}
+
+void Periodical::Display(){
+  cout << Media::m_call_number << ", ";
+  cout << Media::m_title << ", ";
+  cout << Media::m_subjects << ", ";
+  cout << m_desc << ", ";
+  cout << m_notes << ", ";
+  cout << m_series << ", ";
+  cout << m_related_titles;
+}

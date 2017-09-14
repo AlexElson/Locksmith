@@ -57,6 +57,10 @@ Library::Library(){
 		} //desc notes series related
 		m_stack.push_back( new Periodical(f[0], f[1], f[2], f[4], f[8], f[7], f[9]) );
 	}
+	bookfile.close();
+	videofile.close();
+	filmfile.close();
+	perfile.close();
 
 
 
@@ -64,7 +68,7 @@ Library::Library(){
 
 Library::~Library(){
 	for (std::vector<Media*>::iterator it = m_stack.begin(); it != m_stack.end(); ++it) {
-		delete (*it);
+			delete (*it);
     }
 }
 
@@ -113,7 +117,7 @@ vector<Media*> Library::callOtherSearch(string key){
 
 			vector<string> other = (*it)->getOther();
 
-			std::vector<string>::iterator it2; 
+			std::vector<string>::iterator it2;
 			for (it2 = other.begin(); it2 != other.end(); ++it2) {
 
 				//cout << (*it2) << endl;

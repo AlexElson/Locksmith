@@ -34,11 +34,13 @@ int main()
             vector<Media*> all = library.callNumberSearch(key);
 
             for (std::vector<Media*>::iterator it = all.begin(); it != all.end(); ++it) {
-                cout << "- " << (*it)->getTitle() << endl;
+                cout << (*it)->getType() << " : " << endl;
+                (*it)->Display();
+                cout << endl << endl;
             }
         }
         if (search == "title"){
-            
+
             cout << "Type the Search Keyword" << endl;
             string key;
             cin >> key;
@@ -46,11 +48,13 @@ int main()
             vector<Media*> all = library.callTitleSearch(key);
 
             for (std::vector<Media*>::iterator it = all.begin(); it != all.end(); ++it) {
-                cout << "- " << (*it)->getTitle() << endl;
+                cout << (*it)->getType() << " : " << endl;
+                (*it)->Display();
+                cout << endl  << endl;
             }
         }
         if (search == "subjects"){
-            
+
             cout << "Type the Search Keyword" << endl;
             string key;
             cin >> key;
@@ -58,11 +62,13 @@ int main()
             vector<Media*> all = library.callSubjectsSearch(key);
 
             for (std::vector<Media*>::iterator it = all.begin(); it != all.end(); ++it) {
-                cout << "- " << (*it)->getTitle() << endl;
+                cout << (*it)->getType() << " : " << endl;
+                (*it)->Display();
+                cout << endl  << endl;
             }
         }
         if (search == "other"){
-            
+
             cout << "Type the Search Keyword" << endl;
             string key;
             cin >> key;
@@ -70,7 +76,9 @@ int main()
             vector<Media*> all = library.callOtherSearch(key);
 
             for (std::vector<Media*>::iterator it = all.begin(); it != all.end(); ++it) {
-                cout << "- " <<  (*it)->getTitle() << endl;
+                cout << (*it)->getType() << " : " << endl;
+                (*it)->Display();
+                cout << endl << endl;
             }
         }
         cout << endl;

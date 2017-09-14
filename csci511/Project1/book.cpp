@@ -20,3 +20,16 @@ vector<string> Book::getOther(){
 	other.push_back(m_year);
 	return other;
 }
+
+string Book::getType(){
+  return "Book";
+}
+
+void Book::Display(){
+  cout << Media::m_call_number << ", ";
+  cout << Media::m_title << ", ";
+  cout << Media::m_subjects << ", ";
+  cout << m_desc << ", ";
+  cout << m_notes << ", ";
+  cout << m_year;
+}

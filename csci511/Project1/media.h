@@ -14,9 +14,12 @@ class Media {
     	string getCallNumber();
     	string getTitle();
     	string getSubjects();
+      virtual string getType(){};
     	virtual vector<string> getOther(){};
+      virtual void Display(){};
 
     protected:
+      string m_type;
     	string m_call_number;
     	string m_title;
     	string m_subjects;
@@ -24,11 +27,3 @@ class Media {
 };
 
 #endif
-
-
-
-
-
-
-
-

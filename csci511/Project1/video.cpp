@@ -22,3 +22,16 @@ vector<string> Video::getOther(){
 	other.push_back(m_dist);
 	return other;
 }
+
+string Video::getType(){
+  return "Video";
+}
+
+void Video::Display(){
+  cout << Media::m_call_number << ", ";
+  cout << Media::m_title << ", ";
+  cout << Media::m_subjects << ", ";
+  cout << m_desc << ", ";
+  cout << m_notes << ", ";
+  cout << m_dist;
+}

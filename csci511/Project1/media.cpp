@@ -19,5 +19,3 @@ string Media::getTitle(){
 string Media::getSubjects(){
 	return m_subjects;
 }
-
-

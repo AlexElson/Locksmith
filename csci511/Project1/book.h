@@ -11,22 +11,16 @@ using namespace std;
 
 class Book : public Media {
     public:
-		Book(string, string, string, string, string, string);//(int x, int y);
-		virtual vector<string> getOther();
-		//void draw(Grid &grid);
+  		Book(string, string, string, string, string, string);
+  		virtual vector<string> getOther();
+      virtual string getType();
+      virtual void Display();
+
     protected:
-		string m_desc;
-		string m_notes;
-		string m_year;
+  		string m_desc;
+  		string m_notes;
+  		string m_year;
 
 };
 
 #endif
-
-
-
-
-
-
-
-

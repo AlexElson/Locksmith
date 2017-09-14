@@ -16,25 +16,17 @@ using namespace std;
 
 class Library {
     public:
-		Library();
-		~Library();
+  		Library();
+  		~Library();
 
-		vector<Media*> callNumberSearch(string);
-		vector<Media*> callTitleSearch(string);
-		vector<Media*> callSubjectsSearch(string);
-		vector<Media*> callOtherSearch(string);
+  		vector<Media*> callNumberSearch(string);
+  		vector<Media*> callTitleSearch(string);
+  		vector<Media*> callSubjectsSearch(string);
+  		vector<Media*> callOtherSearch(string);
 
     private:
-		vector<Media*> m_stack;
+  		vector<Media*> m_stack;
 
 };
 
 #endif
-
-
-
-
-
-
-
-
